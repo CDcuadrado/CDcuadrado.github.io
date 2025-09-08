@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>Suma de dos números</title>
+</head>
+
+<body>
+    <form id="suma">
+        <label for="num1">Número 1:</label>
+        <input type="number" id="num1" required><br><br>
+
+        <label for="num2">Número 2:</label>
+        <input type="number" id="num2" required><br><br>
+
+        <button type="button" onclick="sumarNumeros()">Sumar</button>
+    </form>
+
+    <p id="resultado"></p>
+
+    <script>
+        function sumarNumeros() {
+            let numero1 = parseFloat(document.getElementById('num1').value);
+            let numero2 = parseFloat(document.getElementById('num2').value);
+            let resultado = numero1 + numero2;
+            document.getElementById('resultado').innerText = "La suma es: " + resultado;
+        }
+    </script>
+</body>
+
+</html>

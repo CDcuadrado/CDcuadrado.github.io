@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>Reloj Digital</title>
+</head>
+
+<body>
+    <center>
+        <br>
+        <h1 style="font-family:'Segoe UI';">Reloj Javascript</h1>
+        <div style="font-size: 1000%; font-family: monospace;" id="reloj"></div>
+    </center>
+
+    <script>
+        function mostrarHora() {
+            const ahora = new Date();
+            let horas = ahora.getHours();
+            let minutos = ahora.getMinutes();
+            let segundos = ahora.getSeconds();
+
+            horas = horas < 10 ? '0' + horas : horas;
+            minutos = minutos < 10 ? '0' + minutos : minutos;
+            segundos = segundos < 10 ? '0' + segundos : segundos;
+            const horaActual = horas + ':' + minutos + ':' + segundos;
+            document.getElementById('reloj').innerText = horaActual;
+        }
+        setInterval(mostrarHora, 1000);
+        mostrarHora();
+    </script>
+
+</body>
+
+</html>
